@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MeetingDoctorsSDK",
-            targets: ["MeetingDoctorsSDK"]),
+            targets: ["MeetingDoctorsSDK", "MeetingDoctorsCore"]),
     ],
     dependencies: [
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMajor(from: "1.6.0"))
