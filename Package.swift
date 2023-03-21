@@ -20,16 +20,10 @@ let package = Package(
             path: "artifacts/MeetingDoctorsCore.xcframework"
         ),
         .target(
-            name: "MeetingDoctorsCoreWrapper",
+            name: "MeetingDoctorsSDK",
             dependencies: [
                 .product(name: "CryptoSwift", package: "CryptoSwift"),
                 .target(name: "MeetingDoctorsCore")
-            ]
-        ),
-        .target(
-            name: "MeetingDoctorsSDK",
-            dependencies: [
-                .target(name: "MeetingDoctorsCoreWrapper")
             ]
         )
     ]
