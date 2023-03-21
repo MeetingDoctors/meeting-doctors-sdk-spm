@@ -22,8 +22,8 @@ let package = Package(
         .target(
             name: "MeetingDoctorsCoreWrapper",
             dependencies: [
-                .target(name: "MeetingDoctorsCore"),
-                .product(name: "CryptoSwift", package: "CryptoSwift")
+                .product(name: "CryptoSwift", package: "CryptoSwift"),
+                .target(name: "MeetingDoctorsCore")
             ]
         ),
         .target(
