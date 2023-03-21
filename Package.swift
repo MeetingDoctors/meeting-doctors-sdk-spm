@@ -12,20 +12,17 @@ let package = Package(
             targets: ["MeetingDoctorsSDK"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMajor(from: "1.6.0"))
     ],
     targets: [
         .binaryTarget(
             name: "MeetingDoctorsCore",
             path: "artifacts/MeetingDoctorsCore.xcframework"
         ),
-        .binaryTarget(
-            name: "CryptoSwift",
-            path: "artifacts/CryptoSwift.xcframework"
-        ),
         .target(
             name: "MeetingDoctorsCoreWrapper",
             dependencies: [
-                .target(name: "CryptoSwift"),
+                .product(name: "CryptoSwift", package: "CryptoSwift"),
                 .target(name: "MeetingDoctorsCore")
             ]
         ),
