@@ -21,7 +21,7 @@ let package = Package(
             name: "MeetingDoctorsSDK",
             dependencies: [
                 "MeetingDoctorsCore",
-                "CryptoSwift"
+                .product(name: "CryptoSwift", package: "CryptoSwift")
             ]),
         .binaryTarget(
             name: "MeetingDoctorsCore",
