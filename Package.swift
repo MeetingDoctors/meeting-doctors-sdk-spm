@@ -19,7 +19,8 @@ let package = Package(
             name: "MeetingDoctorsCoreTarget",
             dependencies: [
                 .target(name: "MeetingDoctorsCoreWrapper")
-            ]
+            ],
+            path: "SwiftPM/MeetingDoctorsCoreTargetWrap"
         ),
         .binaryTarget(
             name: "MeetingDoctorsCore",
@@ -30,7 +31,8 @@ let package = Package(
             dependencies: [
                 .product(name: "CryptoSwift", package: "CryptoSwift"),
                 .target(name: "MeetingDoctorsCore")
-            ]
+            ],
+            path: "MeetingDoctorsCoreWrapper"
         )
     ]
 )
