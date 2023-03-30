@@ -12,7 +12,7 @@ let package = Package(
             targets: ["MeetingDoctorsCoreTarget"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMajor(from: "1.6.0"))
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .exact("1.6.0"))
     ],
     targets: [
         .target(
