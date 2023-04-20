@@ -9,28 +9,21 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MeetingDoctorsCore",
-            targets: ["MeetingDoctorsCoreTarget"]),
+            targets: ["MeetingDoctorsCoreWrapper"]),
     ],
     dependencies: [
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .exact("1.6.0"))
     ],
     targets: [
-        .target(
-            name: "MeetingDoctorsCoreTarget",
-            dependencies: [
-                .target(name: "MeetingDoctorsCoreWrapper")
-            ],
-            path: "SwiftPM/MeetingDoctorsCoreTargetWrap"
-        ),
         .binaryTarget(
-            name: "FruitBasket",
-            path: "artifacts/FruitBasket.xcframework"
+            name: "MeetingDoctorsCore",
+            path: "artifacts/MeetingDoctorsCore.xcframework"
         ),
         .target(
             name: "MeetingDoctorsCoreWrapper",
             dependencies: [
                 .product(name: "CryptoSwift", package: "CryptoSwift"),
-                .target(name: "FruitBasket")
+                .target(name: "MeetingDoctorsCore")
             ],
             path: "MeetingDoctorsCoreWrapper"
         )
