@@ -24,7 +24,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "MeetingDoctorsCore",
-            path: "artifacts/MeetingDoctorsCore.xcframework"
+            path: "artifacts/FruitBasket.xcframework"
         ),
         .target(
             name: "MeetingDoctorsCoreWrapper",
