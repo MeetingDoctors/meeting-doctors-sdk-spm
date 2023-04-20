@@ -1,11 +1,11 @@
 framework module MeetingDoctorsCore {
-  umbrella header "Core.h"
+  umbrella header "../Headers/Core.h"
 
   export *
   module * { export * }
 }
 
 module MeetingDoctorsCore.Swift {
-    header "MeetingDoctorsCore-Swift.h"
+    header "../Headers/MeetingDoctorsCore-Swift.h"
     requires objc
 }
