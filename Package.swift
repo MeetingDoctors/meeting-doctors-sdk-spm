@@ -16,14 +16,14 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "FruitBasket",
-            path: "artifacts/FruitBasket.xcframework"
+            name: "MeetingDoctorsCore",
+            path: "artifacts/MeetingDoctorsCore.xcframework"
         ),
         .target(
             name: "MeetingDoctorsCoreWrapper",
             dependencies: [
                 .product(name: "CryptoSwift", package: "CryptoSwift"),
-                .target(name: "FruitBasket")
+                .target(name: "MeetingDoctorsCore")
             ],
             path: "MeetingDoctorsCoreWrapper"
         )
