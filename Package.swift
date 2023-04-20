@@ -23,14 +23,14 @@ let package = Package(
             path: "SwiftPM/MeetingDoctorsCoreTargetWrap"
         ),
         .binaryTarget(
-            name: "MeetingDoctorsCore",
+            name: "FruitBasket",
             path: "artifacts/FruitBasket.xcframework"
         ),
         .target(
             name: "MeetingDoctorsCoreWrapper",
             dependencies: [
                 .product(name: "CryptoSwift", package: "CryptoSwift"),
-                .target(name: "MeetingDoctorsCore")
+                .target(name: "FruitBasket")
             ],
             path: "MeetingDoctorsCoreWrapper"
         )
